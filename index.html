@@ -35,8 +35,6 @@ body::before {
     repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(0,212,255,0.02) 60px),
     repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(0,212,255,0.02) 60px);
 }
-
-/* NAV */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   padding: 0 40px; height: 64px;
@@ -52,8 +50,6 @@ nav {
 .nav-links a:hover { color: var(--cyan); }
 .nav-cta { background: var(--cyan) !important; color: var(--black) !important; padding: 8px 18px; border-radius: 6px; }
 .nav-cta:hover { background: #33DDFF !important; }
-
-/* HERO */
 .hero {
   position: relative; z-index: 1; min-height: 100vh;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -65,23 +61,16 @@ nav {
   background: radial-gradient(circle, rgba(0,212,255,0.07) 0%, transparent 65%);
   pointer-events: none;
 }
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2);
-  border-radius: 100px; padding: 6px 16px;
-  font-family: var(--font-m); font-size: 11px; color: var(--cyan);
-  letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 32px;
-  animation: fadeUp 0.6s ease both;
-}
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2); border-radius: 100px; padding: 6px 16px; font-family: var(--font-m); font-size: 11px; color: var(--cyan); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 32px; animation: fadeUp 0.6s ease both; }
 .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--cyan); animation: pulse 2s ease infinite; }
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.8)} }
-.hero h1 { font-family: var(--font-d); font-weight: 800; font-size: clamp(42px, 8vw, 88px); letter-spacing: -0.04em; line-height: 0.95; margin-bottom: 28px; animation: fadeUp 0.6s 0.1s ease both; }
+.hero h1 { font-family: var(--font-d); font-weight: 800; font-size: clamp(42px,8vw,88px); letter-spacing: -0.04em; line-height: 0.95; margin-bottom: 28px; animation: fadeUp 0.6s 0.1s ease both; }
 .hero h1 .line1 { display: block; color: var(--white); }
 .hero h1 .line2 { display: block; color: var(--cyan); }
 .hero h1 .line3 { display: block; color: var(--amber); }
 .hero-sub { font-family: var(--font-b); font-weight: 300; font-size: clamp(16px,2.5vw,20px); color: var(--mist); line-height: 1.6; max-width: 580px; margin: 0 auto 48px; animation: fadeUp 0.6s 0.2s ease both; }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; animation: fadeUp 0.6s 0.3s ease both; }
-.btn-primary { background: var(--cyan); color: var(--black); font-family: var(--font-d); font-weight: 700; font-size: 15px; padding: 14px 32px; border-radius: 8px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 0 24px rgba(0,212,255,0.25); }
+.btn-primary { background: var(--cyan); color: var(--black); font-family: var(--font-d); font-weight: 700; font-size: 15px; padding: 14px 32px; border-radius: 8px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 0 24px rgba(0,212,255,0.25); border: none; cursor: pointer; }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 36px rgba(0,212,255,0.4); }
 .btn-secondary { background: transparent; color: var(--white); font-family: var(--font-d); font-weight: 600; font-size: 15px; padding: 14px 32px; border-radius: 8px; text-decoration: none; border: 1px solid var(--steel); transition: border-color 0.2s, color 0.2s; }
 .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); }
@@ -91,83 +80,45 @@ nav {
 .stat-num span { color: var(--cyan); }
 .stat-label { font-family: var(--font-m); font-size: 10px; color: var(--slate); letter-spacing: 0.2em; text-transform: uppercase; margin-top: 4px; }
 @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
-
-/* TICKER */
 .ticker { position: relative; z-index: 1; border-top: 1px solid var(--steel); border-bottom: 1px solid var(--steel); padding: 14px 0; overflow: hidden; background: var(--deep); }
 .ticker-track { display: flex; animation: ticker 30s linear infinite; width: max-content; }
 .ticker-item { font-family: var(--font-m); font-size: 11px; color: var(--slate); letter-spacing: 0.2em; text-transform: uppercase; padding: 0 40px; white-space: nowrap; }
 .ticker-item span { color: var(--cyan); margin-right: 40px; }
 @keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
-
-/* SECTIONS */
 section { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; padding: 100px 24px; }
 .section-tag { font-family: var(--font-m); font-size: 10px; letter-spacing: 0.3em; color: var(--amber); text-transform: uppercase; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
 .section-tag::before { content: '//'; color: var(--steel); }
 .section-title { font-family: var(--font-d); font-weight: 800; font-size: clamp(28px,5vw,48px); letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 16px; }
 .section-title span { color: var(--cyan); }
 .section-body { font-family: var(--font-b); font-weight: 300; font-size: 17px; color: var(--mist); line-height: 1.7; max-width: 560px; }
-
-/* PRODUCTS GRID */
 .products-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 56px; }
-
-.product-card {
-  background: var(--carbon); border: 1px solid var(--steel);
-  border-radius: 18px; overflow: hidden;
-  display: flex; flex-direction: column;
-  transition: transform 0.2s, border-color 0.2s;
-  position: relative;
-}
+.product-card { background: var(--carbon); border: 1px solid var(--steel); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.2s, border-color 0.2s; }
 .product-card:hover { transform: translateY(-4px); border-color: rgba(0,212,255,0.3); }
-
-.product-card-header { padding: 32px 32px 24px; position: relative; }
+.product-card-header { padding: 32px 32px 24px; }
 .product-card-header.teacher { background: linear-gradient(135deg, #0D1B2A 0%, #1B3A4B 100%); }
 .product-card-header.general { background: linear-gradient(135deg, #12111A 0%, #1A0A2E 100%); }
-
-.product-badge {
-  display: inline-flex; align-items: center; gap: 6px;
-  border-radius: 100px; padding: 4px 12px;
-  font-family: var(--font-m); font-size: 10px; letter-spacing: 0.15em;
-  text-transform: uppercase; margin-bottom: 16px;
-}
+.product-badge { display: inline-flex; align-items: center; gap: 6px; border-radius: 100px; padding: 4px 12px; font-family: var(--font-m); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px; }
 .product-badge.teacher { background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.25); color: var(--cyan); }
 .product-badge.general { background: rgba(108,61,244,0.15); border: 1px solid rgba(108,61,244,0.3); color: #A89FCC; }
-
 .product-card-title { font-family: var(--font-d); font-weight: 800; font-size: 22px; letter-spacing: -0.02em; line-height: 1.2; color: var(--white); margin-bottom: 8px; }
 .product-card-title.teacher span { color: var(--cyan); }
 .product-card-title.general span { color: #A89FCC; }
 .product-card-sub { font-family: var(--font-m); font-size: 10px; color: var(--slate); letter-spacing: 0.12em; text-transform: uppercase; }
-
 .product-card-body { padding: 24px 32px 32px; flex: 1; display: flex; flex-direction: column; }
 .product-card-desc { font-family: var(--font-b); font-weight: 300; font-size: 14px; color: var(--mist); line-height: 1.6; margin-bottom: 20px; }
-
 .product-features { list-style: none; margin-bottom: 28px; display: flex; flex-direction: column; gap: 8px; }
 .product-features li { font-family: var(--font-m); font-size: 11px; color: var(--slate); display: flex; align-items: flex-start; gap: 8px; line-height: 1.4; }
 .product-features li::before { content: ''; width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; margin-top: 1px; background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L3.5 6.5L9 1' stroke='%2300D4FF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center; background-color: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.2); }
 .product-features li.purple::before { background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L3.5 6.5L9 1' stroke='%236C3DF4' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-color: rgba(108,61,244,0.1); border: 1px solid rgba(108,61,244,0.25); }
-
 .product-footer { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--steel); display: flex; align-items: center; justify-content: space-between; }
 .product-price { font-family: var(--font-d); font-weight: 800; font-size: 28px; color: var(--white); letter-spacing: -0.02em; }
 .product-price span { font-size: 14px; color: var(--slate); font-weight: 400; }
-
-.btn-buy-teacher { background: var(--cyan); color: var(--black); font-family: var(--font-d); font-weight: 700; font-size: 13px; padding: 11px 22px; border-radius: 7px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+.btn-buy-teacher { background: var(--cyan); color: var(--black); font-family: var(--font-d); font-weight: 700; font-size: 13px; padding: 11px 22px; border-radius: 7px; border: none; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
 .btn-buy-teacher:hover { transform: scale(1.03); box-shadow: 0 4px 20px rgba(0,212,255,0.3); }
-.btn-buy-general { background: var(--purple); color: var(--white); font-family: var(--font-d); font-weight: 700; font-size: 13px; padding: 11px 22px; border-radius: 7px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+.btn-buy-general { background: var(--purple); color: var(--white); font-family: var(--font-d); font-weight: 700; font-size: 13px; padding: 11px 22px; border-radius: 7px; border: none; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
 .btn-buy-general:hover { transform: scale(1.03); box-shadow: 0 4px 20px rgba(108,61,244,0.35); }
-
-/* BUNDLE BANNER */
-.bundle-banner {
-  position: relative; z-index: 1;
-  background: linear-gradient(135deg, var(--carbon) 0%, var(--steel) 100%);
-  border-top: 1px solid var(--steel); border-bottom: 1px solid var(--steel);
-  padding: 60px 24px; text-align: center; overflow: hidden;
-  margin: 0;
-}
-.bundle-banner::before {
-  content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-  width: 600px; height: 300px;
-  background: radial-gradient(ellipse, rgba(108,61,244,0.08) 0%, transparent 65%);
-  pointer-events: none;
-}
+.bundle-banner { position: relative; z-index: 1; background: linear-gradient(135deg, var(--carbon) 0%, var(--steel) 100%); border-top: 1px solid var(--steel); border-bottom: 1px solid var(--steel); padding: 60px 24px; text-align: center; overflow: hidden; }
+.bundle-banner::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 600px; height: 300px; background: radial-gradient(ellipse, rgba(108,61,244,0.08) 0%, transparent 65%); pointer-events: none; }
 .bundle-inner { max-width: 600px; margin: 0 auto; position: relative; z-index: 1; }
 .bundle-tag { font-family: var(--font-m); font-size: 10px; letter-spacing: 0.3em; color: var(--amber); text-transform: uppercase; margin-bottom: 12px; }
 .bundle-title { font-family: var(--font-d); font-weight: 800; font-size: clamp(24px,4vw,40px); letter-spacing: -0.03em; margin-bottom: 10px; }
@@ -177,29 +128,22 @@ section { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; pad
 .bundle-was { font-family: var(--font-d); font-weight: 700; font-size: 20px; color: var(--slate); text-decoration: line-through; }
 .bundle-now { font-family: var(--font-d); font-weight: 800; font-size: 36px; color: var(--amber); letter-spacing: -0.03em; }
 .bundle-save { background: rgba(255,140,0,0.15); border: 1px solid rgba(255,140,0,0.3); border-radius: 100px; padding: 4px 14px; font-family: var(--font-m); font-size: 11px; color: var(--amber); letter-spacing: 0.1em; }
-.btn-bundle { background: var(--amber); color: var(--black); font-family: var(--font-d); font-weight: 700; font-size: 16px; padding: 16px 40px; border-radius: 8px; text-decoration: none; display: inline-block; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 0 24px rgba(255,140,0,0.25); }
+.btn-bundle { background: var(--amber); color: var(--black); font-family: var(--font-d); font-weight: 700; font-size: 16px; padding: 16px 40px; border-radius: 8px; border: none; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 0 24px rgba(255,140,0,0.25); }
 .btn-bundle:hover { transform: translateY(-2px); box-shadow: 0 0 36px rgba(255,140,0,0.4); }
-
-/* WHAT WE DO */
 .what-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 20px; margin-top: 56px; }
 .what-card { background: var(--carbon); border: 1px solid var(--steel); border-radius: 14px; padding: 32px; transition: border-color 0.2s, transform 0.2s; position: relative; overflow: hidden; }
 .what-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--cyan), transparent); opacity: 0; transition: opacity 0.2s; }
 .what-card:hover { border-color: rgba(0,212,255,0.3); transform: translateY(-3px); }
 .what-card:hover::before { opacity: 1; }
 .what-icon { width: 44px; height: 44px; border-radius: 10px; background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.15); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 20px; }
-.what-card h3 { font-family: var(--font-d); font-weight: 700; font-size: 18px; letter-spacing: -0.01em; margin-bottom: 10px; color: var(--white); }
+.what-card h3 { font-family: var(--font-d); font-weight: 700; font-size: 18px; margin-bottom: 10px; color: var(--white); }
 .what-card p { font-family: var(--font-b); font-weight: 300; font-size: 14px; color: var(--slate); line-height: 1.6; }
-
-/* HOW IT WORKS */
 .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 2px; margin-top: 56px; background: var(--steel); border-radius: 16px; overflow: hidden; }
 .step { background: var(--carbon); padding: 36px 28px; }
 .step-num { font-family: var(--font-d); font-weight: 800; font-size: 48px; letter-spacing: -0.05em; line-height: 1; color: rgba(0,212,255,0.1); margin-bottom: 16px; }
 .step h3 { font-family: var(--font-d); font-weight: 700; font-size: 16px; color: var(--white); margin-bottom: 8px; }
 .step p { font-family: var(--font-b); font-weight: 300; font-size: 13px; color: var(--slate); line-height: 1.6; }
-
-/* EMAIL CTA */
 .cta-band { position: relative; z-index: 1; background: linear-gradient(135deg, var(--carbon) 0%, var(--steel) 100%); border-top: 1px solid var(--steel); border-bottom: 1px solid var(--steel); padding: 80px 24px; text-align: center; overflow: hidden; }
-.cta-band::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 800px; height: 400px; background: radial-gradient(ellipse, rgba(0,212,255,0.06) 0%, transparent 65%); pointer-events: none; }
 .cta-band h2 { font-family: var(--font-d); font-weight: 800; font-size: clamp(28px,5vw,52px); letter-spacing: -0.03em; margin-bottom: 16px; }
 .cta-band h2 span { color: var(--cyan); }
 .cta-band p { font-family: var(--font-b); font-weight: 300; font-size: 17px; color: var(--mist); margin-bottom: 36px; }
@@ -207,14 +151,12 @@ section { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; pad
 .cta-input { flex: 1; min-width: 220px; background: var(--deep); border: 1px solid var(--steel); border-radius: 8px; padding: 14px 18px; font-family: var(--font-b); font-size: 15px; color: var(--white); outline: none; transition: border-color 0.2s; }
 .cta-input:focus { border-color: var(--cyan); }
 .cta-input::placeholder { color: var(--slate); }
-.cta-submit { background: var(--cyan); color: var(--black); font-family: var(--font-d); font-weight: 700; font-size: 14px; padding: 14px 24px; border-radius: 8px; border: none; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
-.cta-submit:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,212,255,0.3); }
+.cta-submit { background: var(--cyan); color: var(--black); font-family: var(--font-d); font-weight: 700; font-size: 14px; padding: 14px 24px; border-radius: 8px; border: none; cursor: pointer; transition: transform 0.2s; }
+.cta-submit:hover { transform: translateY(-2px); }
 .cta-note { font-family: var(--font-m); font-size: 10px; color: var(--slate); margin-top: 12px; letter-spacing: 0.1em; }
-
-/* FOOTER */
 footer { position: relative; z-index: 1; background: var(--deep); border-top: 1px solid var(--steel); padding: 48px 40px 32px; display: flex; flex-direction: column; gap: 32px; }
 .footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px; }
-.footer-logo-text { font-family: var(--font-d); font-weight: 800; font-size: 20px; letter-spacing: -0.02em; color: var(--white); }
+.footer-logo-text { font-family: var(--font-d); font-weight: 800; font-size: 20px; color: var(--white); }
 .footer-logo-text span { color: var(--cyan); }
 .footer-tagline { font-family: var(--font-m); font-size: 11px; color: var(--slate); margin-top: 6px; letter-spacing: 0.1em; }
 .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
@@ -222,6 +164,37 @@ footer { position: relative; z-index: 1; background: var(--deep); border-top: 1p
 .footer-links a:hover { color: var(--cyan); }
 .footer-bottom { border-top: 1px solid var(--steel); padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 .footer-copy { font-family: var(--font-m); font-size: 10px; color: var(--steel); letter-spacing: 0.15em; }
+
+/* MODAL */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 1000; align-items: center; justify-content: center; padding: 24px; }
+.modal-overlay.active { display: flex; }
+.modal { background: var(--carbon); border: 1px solid var(--steel); border-radius: 18px; padding: 40px; max-width: 460px; width: 100%; position: relative; }
+.modal-close { position: absolute; top: 16px; right: 20px; background: none; border: none; color: var(--slate); font-size: 24px; cursor: pointer; line-height: 1; }
+.modal-close:hover { color: var(--white); }
+.modal-title { font-family: var(--font-d); font-weight: 800; font-size: 22px; letter-spacing: -0.02em; color: var(--white); margin-bottom: 4px; }
+.modal-sub { font-family: var(--font-m); font-size: 10px; color: var(--slate); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 24px; }
+.modal-price { font-family: var(--font-d); font-weight: 800; font-size: 32px; color: var(--white); letter-spacing: -0.03em; margin-bottom: 28px; }
+.modal-price span { font-size: 16px; color: var(--slate); font-weight: 400; }
+.form-group { margin-bottom: 16px; }
+.form-label { font-family: var(--font-m); font-size: 10px; color: var(--slate); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 6px; display: block; }
+.form-input { width: 100%; background: var(--deep); border: 1px solid var(--steel); border-radius: 8px; padding: 12px 14px; font-family: var(--font-b); font-size: 15px; color: var(--white); outline: none; transition: border-color 0.2s; }
+.form-input:focus { border-color: var(--cyan); }
+.form-input::placeholder { color: var(--slate); }
+#card-element { background: var(--deep); border: 1px solid var(--steel); border-radius: 8px; padding: 14px; margin-bottom: 8px; transition: border-color 0.2s; }
+#card-element.focused { border-color: var(--cyan); }
+#card-errors { font-family: var(--font-m); font-size: 11px; color: var(--coral); min-height: 16px; margin-bottom: 20px; }
+.btn-pay { width: 100%; background: var(--cyan); color: var(--black); font-family: var(--font-d); font-weight: 700; font-size: 16px; padding: 16px; border-radius: 8px; border: none; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 0 20px rgba(0,212,255,0.2); }
+.btn-pay:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 0 32px rgba(0,212,255,0.35); }
+.btn-pay:disabled { opacity: 0.6; cursor: not-allowed; }
+.btn-pay.purple { background: var(--purple); box-shadow: 0 0 20px rgba(108,61,244,0.2); }
+.btn-pay.purple:hover:not(:disabled) { box-shadow: 0 0 32px rgba(108,61,244,0.35); }
+.btn-pay.amber { background: var(--amber); box-shadow: 0 0 20px rgba(255,140,0,0.2); }
+.modal-secure { font-family: var(--font-m); font-size: 10px; color: var(--slate); text-align: center; margin-top: 12px; letter-spacing: 0.1em; }
+.modal-success { display: none; text-align: center; padding: 20px 0; }
+.modal-success.active { display: block; }
+.modal-success-icon { font-size: 48px; margin-bottom: 16px; }
+.modal-success h3 { font-family: var(--font-d); font-weight: 800; font-size: 22px; color: var(--white); margin-bottom: 8px; }
+.modal-success p { font-family: var(--font-b); font-size: 14px; color: var(--mist); line-height: 1.6; }
 
 @media (max-width: 768px) {
   nav { padding: 0 20px; }
@@ -258,7 +231,7 @@ footer { position: relative; z-index: 1; background: var(--deep); border-top: 1p
     <a href="#about">About</a>
     <a href="#how">How It Works</a>
     <a href="#contact">Contact</a>
-    <a href="https://payhip.com" class="nav-cta">Shop Now</a>
+    <a href="#products" class="nav-cta">Shop Now</a>
   </div>
 </nav>
 
@@ -310,10 +283,7 @@ footer { position: relative; z-index: 1; background: var(--deep); border-top: 1p
   <div class="section-tag">Our Guides</div>
   <h2 class="section-title">Two guides.<br><span>Endless time saved.</span></h2>
   <p class="section-body">Practical, no-nonsense AI guides packed with copy-and-paste prompts. Pick the one that fits you — or grab both and save.</p>
-
   <div class="products-grid">
-
-    <!-- Teacher Guide -->
     <div class="product-card">
       <div class="product-card-header teacher">
         <div class="product-badge teacher">🎓 For Teachers</div>
@@ -335,12 +305,10 @@ footer { position: relative; z-index: 1; background: var(--deep); border-top: 1p
         </ul>
         <div class="product-footer">
           <div class="product-price">£9.99 <span>one-time</span></div>
-          <a href="https://payhip.com" class="btn-buy-teacher">Buy Now →</a>
+          <a href="https://buy.stripe.com/cNicN51sh6UK1eF67vak000" target="_blank" class="btn-buy-teacher">Buy Now →</a>
         </div>
       </div>
     </div>
-
-    <!-- Everyday Guide -->
     <div class="product-card">
       <div class="product-card-header general">
         <div class="product-badge general">✦ For Everyone</div>
@@ -362,26 +330,25 @@ footer { position: relative; z-index: 1; background: var(--deep); border-top: 1p
         </ul>
         <div class="product-footer">
           <div class="product-price">£9.99 <span>one-time</span></div>
-          <a href="https://payhip.com" class="btn-buy-general">Buy Now →</a>
+          <a href="https://buy.stripe.com/bJe5kD7QF4MC6yZ1Rfak001" target="_blank" class="btn-buy-general">Buy Now →</a>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- BUNDLE BANNER -->
+<!-- BUNDLE -->
 <div class="bundle-banner">
   <div class="bundle-inner">
     <div class="bundle-tag">// best_value</div>
     <h2 class="bundle-title">Get both guides.<br><span>Save £5.</span></h2>
-    <p class="bundle-desc">Buy the Teacher's Toolkit and the Everyday Life guide together and save £5. That's 70+ prompts, 21 chapters, and 6 bonus sections for less than a coffee and a cake.</p>
+    <p class="bundle-desc">Buy both guides together and save £5. That's 70+ prompts, 21 chapters, and 6 bonus sections for less than a coffee and a cake.</p>
     <div class="bundle-prices">
       <div class="bundle-was">£19.98</div>
       <div class="bundle-now">£14.99</div>
       <div class="bundle-save">Save £5</div>
     </div>
-    <a href="https://payhip.com" class="btn-bundle">Get the Bundle →</a>
+    <a href="https://buy.stripe.com/28E3cv8UJ7YObTj67vak002" target="_blank" class="btn-bundle">Get the Bundle →</a>
   </div>
 </div>
 
@@ -391,21 +358,9 @@ footer { position: relative; z-index: 1; background: var(--deep); border-top: 1p
   <h2 class="section-title">Built by people who<br><span>actually use it.</span></h2>
   <p class="section-body">NeuroForge AI was founded by an experienced secondary school teacher and computing professional based in the UK. Every guide is written from real experience — not theory.</p>
   <div class="what-grid" style="margin-top:48px;">
-    <div class="what-card">
-      <div class="what-icon">🇬🇧</div>
-      <h3>UK Based</h3>
-      <p>Built and written in the UK, for UK people. Our guides use British English, reference UK law, and understand how things actually work here.</p>
-    </div>
-    <div class="what-card">
-      <div class="what-icon">⚡</div>
-      <h3>Practical First</h3>
-      <p>No fluff, no theory. Every chapter has copy-and-paste prompts you can use today. We care about results, not word count.</p>
-    </div>
-    <div class="what-card">
-      <div class="what-icon">🔓</div>
-      <h3>No Subscription</h3>
-      <p>Buy once, own forever. No monthly fees, no renewal reminders, no surprises. Just a guide that keeps working for you.</p>
-    </div>
+    <div class="what-card"><div class="what-icon">🇬🇧</div><h3>UK Based</h3><p>Built and written in the UK, for UK people. Our guides use British English, reference UK law, and understand how things actually work here.</p></div>
+    <div class="what-card"><div class="what-icon">⚡</div><h3>Practical First</h3><p>No fluff, no theory. Every chapter has copy-and-paste prompts you can use today. We care about results, not word count.</p></div>
+    <div class="what-card"><div class="what-icon">🔓</div><h3>No Subscription</h3><p>Buy once, own forever. No monthly fees, no renewal reminders, no surprises. Just a guide that keeps working for you.</p></div>
   </div>
 </section>
 
@@ -414,7 +369,7 @@ footer { position: relative; z-index: 1; background: var(--deep); border-top: 1p
   <div class="section-tag">How It Works</div>
   <h2 class="section-title">Up and running<br><span>same day.</span></h2>
   <div class="steps">
-    <div class="step"><div class="step-num">01</div><h3>Buy the guide</h3><p>Instant PDF download. No account needed, no subscription, no faff.</p></div>
+    <div class="step"><div class="step-num">01</div><h3>Buy the guide</h3><p>Pay securely on this page. Instant PDF download direct to your inbox.</p></div>
     <div class="step"><div class="step-num">02</div><h3>Open a free AI tool</h3><p>Claude.ai or ChatGPT — both free. Takes 2 minutes to set up.</p></div>
     <div class="step"><div class="step-num">03</div><h3>Copy a prompt</h3><p>Every chapter has ready-made prompts. Paste, fill in the brackets, done.</p></div>
     <div class="step"><div class="step-num">04</div><h3>Get your time back</h3><p>Most people save 3–8 hours per week within the first week of using AI.</p></div>
@@ -451,6 +406,7 @@ footer { position: relative; z-index: 1; background: var(--deep); border-top: 1p
     <div class="footer-copy">NEUROFORGEAI.CO.UK</div>
   </div>
 </footer>
+
 
 </body>
 </html>
